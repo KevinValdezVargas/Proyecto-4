@@ -137,7 +137,7 @@ nav {
 /*---------------Contacts---------------*/
 
 
-.contacto {
+#contacto {
     display: flex;
     font-size: 30px;
     
