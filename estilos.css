@@ -93,6 +93,11 @@ nav {
 }
 
 /*---------------Projects Images---------------*/
+article p{
+    width: 70%;
+    height: 50px;
+    margin: auto;
+}
 .container {
     position: relative;
     width: 100%;
@@ -170,7 +175,8 @@ nav {
     color: #31374f;
     height: 800px;
     margin: auto;
-    padding: 0150px 0 0 0;
+    padding: 150px 0 0 0;
+    align-content: center;
 }
 
 
@@ -201,4 +207,72 @@ form textarea {
     text-align: center;
 }
 
+/*---------------Responsive---------------*/
 
+@media (max-width: 1000px) {
+    /*----------Home----------*/
+    .home {
+        padding: 20%;    
+    }
+
+    .home-information {
+        
+        width: 100%;
+    }
+    /*----------projects----------*/
+    .proyecto-contenedor {
+        flex-direction: column;
+        display: block;
+    }
+    /*----------Contacto----------*/
+    #contacto {
+        flex-direction: column;
+        display: block;
+        
+    }
+    .contacto-text {
+        width: 100%;
+        font-size: 80%;
+        height: 500px;
+        padding: 150px 0 80px 0;
+    }
+    .formulario {
+        width: 100%;
+        font-size: 80%;
+        height: 500px;
+        padding: 150px 0 150px 0;
+    }
+}
+
+@media (max-width: 375px) {
+    nav ul li {
+        display: inline;
+        font-size: 70%;
+    }
+
+    nav li a {
+        padding: 10px 10px;
+    }
+
+    .home {
+        padding: 220px 0 250px 0;
+        font-size: 70%;
+    }
+    
+    .projects-wrapper {
+        font-size: 80%;
+    }
+    .proyecto-contenedor {
+        font-size: 120%;
+    }
+    .contacto-text {
+        font-size: 50%;
+        height: 300px;
+        padding: 50px 0 50px 0;
+    }
+    .formulario {
+        font-size: 50%;
+        height: 300px;
+        padding: 30px 0 180px 0;
+    }
+}
