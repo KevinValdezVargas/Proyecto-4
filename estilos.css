@@ -2,6 +2,7 @@ html {
     scroll-behavior: smooth;
     font-family: 'Oswald', sans-serif;
     font-family: 'Source Sans Pro', sans-serif;
+    font-size: 100%;
 }
 
 /*---------------Background---------------*/
@@ -21,15 +22,15 @@ nav ul {
     overflow: hidden;
     background-color: #333;
     text-align: center;
-    position: fixed;
+    position:fixed;
     top: 0;
     width: 100%;
-    z-index: 100;
-    font-size: 25px;
+    z-index: 1;
+    font-size: 1.2rem;
 }
 
 nav li {
-    display: inline-block;
+    display: inline;
     color: white;
     text-decoration: none;
 }
@@ -39,17 +40,13 @@ nav li a {
     text-decoration: none;
     text-align: center;
     display: block;
-    padding: 20px 20px;
+    border: solid 1px rgb(63, 61, 61);
+    padding: 5px 5px;
 }
 
 nav li a:hover {
     background-color: #111;
 }
-
-nav {
-    font-size: 20px;
-}
-
 /*---------------Home---------------*/
 
 .home-image {
@@ -57,35 +54,30 @@ nav {
 }
 
 .foto-perfil {
-    width: 30%;
+    width: 40%;
     border-radius: 50%;
 }
 
 .home {
-    padding: 8%;
-    font-size: 18px;
+    
+    margin-top: 5rem;
+    padding: 7rem 0;
 }
 
 .home-information {
-    width: 35%;
     margin: auto;
     text-align: center;
+    
 }
 
 
 #contenido {
     padding: 20px;
+    font-size: 0.8rem;
 }
 
 /*---------------Projects---------------*/
 
-.proyecto-contenedor {
-    font-size: 20px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 600px);
-    grid-gap: 15px;
-}
 
 .grid {
     text-align: center;
@@ -94,9 +86,9 @@ nav {
 
 /*---------------Projects Images---------------*/
 article p{
-    width: 70%;
-    height: 50px;
+    width: 80%;
     margin: auto;
+    height: 3rem;
 }
 .container {
     position: relative;
@@ -130,7 +122,7 @@ article p{
   
 .text {
     background-color: rgba(49,55,79,1);
-    font-size: 16px;
+    font-size: x;
     padding: 16px 25px;
 }
 
@@ -138,54 +130,31 @@ article p{
     text-decoration: none;
     color: white;
 }
-
-/*---------------Contacts---------------*/
-
-
+/*---------------Contacto---------------*/
 #contacto {
-    display: flex;
-    font-size: 30px;
-    
-}
-
-.contacto-text {
-    width: 50%;
     text-align: center;
+}
+
+.info-contacto {
     background-color: #31374f;
-    height: 800px;
+    padding: 50% 0;
     color: #e5e7eb;
-    margin: auto;
-    padding: 0150px 0 0 0;
 }
-
-.social-media {
-    display: flex;
-}
-
-.social-logo {
-    width: 40%;
-}
-
-/*---------------Formulario---------------*/
 
 .formulario {
-    text-align: center;
-    width: 50%;
     background-color: #e5e7eb;
+    padding: 40% 0;
     color: #31374f;
-    height: 800px;
-    margin: auto;
-    padding: 150px 0 0 0;
-    align-content: center;
 }
 
 
 form input[type=text], input[type=email] {
     display: block;
     width: 50%;
-    padding: 10px 0 10px 5px;
+    padding: 5px 0 5px 5px;
     margin: auto;
-    font-size: 15px;
+    position: relative;
+    
 }
 
 form textarea {
@@ -194,7 +163,7 @@ form textarea {
     padding: 5px 0 100px 5px;
     resize: none;
     margin: auto;
-    font-size: 15px;
+    position: relative;
 }
 
 
@@ -202,77 +171,83 @@ form textarea {
     background-color: #31374f;
     width: 20%;
     border-radius: 4px;
-    padding: 8px 0 8px 5px;
+    padding: 8px 0 8px;
     color: #e5e7eb;
     text-align: center;
 }
 
 /*---------------Responsive---------------*/
-
-@media (max-width: 1000px) {
+@media screen and (min-width:50rem) {
     /*----------Home----------*/
-    .home {
-        padding: 20%;    
+    
+    .foto-perfil {
+        width: 20%;
     }
 
     .home-information {
-        
-        width: 100%;
-    }
-    /*----------projects----------*/
-    .proyecto-contenedor {
-        flex-direction: column;
-        display: block;
-    }
-    /*----------Contacto----------*/
-    #contacto {
-        flex-direction: column;
-        display: block;
-        
-    }
-    .contacto-text {
-        width: 100%;
-        font-size: 80%;
-        height: 500px;
-        padding: 150px 0 80px 0;
-    }
-    .formulario {
-        width: 100%;
-        font-size: 80%;
-        height: 500px;
-        padding: 150px 0 150px 0;
-    }
-}
-
-@media (max-width: 375px) {
-    nav ul li {
-        display: inline;
-        font-size: 70%;
-    }
-
-    nav li a {
-        padding: 10px 10px;
-    }
-
-    .home {
-        padding: 220px 0 250px 0;
-        font-size: 70%;
+        width: 50%;
     }
     
-    .projects-wrapper {
-        font-size: 80%;
+    #contenido {
+        padding: 20px;
+        font-size: 1.2rem;
     }
+
+    /*----------Nav----------*/
+    nav ul {
+        font-size: 2rem;
+    }
+
+    nav li {
+        display: inline-block;
+        color: white;
+        text-decoration: none;
+    }
+    
+    nav li a {
+        text-decoration: none;
+        border: 0;
+        padding: 20px 20px;
+    }
+
+    /*----------Project----------*/
     .proyecto-contenedor {
-        font-size: 120%;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 1rem;
     }
-    .contacto-text {
-        font-size: 50%;
-        height: 300px;
-        padding: 50px 0 50px 0;
+    
+    .grid {
+        text-align: center;
+        border: 2px solid black;
     }
+    article p{
+        width: 80%;
+        margin: auto;
+        height: 5rem;
+    }
+    
+    .info-contacto {
+        background-color: #31374f;
+        padding: 15% 0;
+        color: #e5e7eb;
+        width: 50%;
+    }
+    
     .formulario {
-        font-size: 50%;
-        height: 300px;
-        padding: 30px 0 180px 0;
+        background-color: #e5e7eb;
+        padding: 5% 0;
+        color: #31374f;
+        width: 50%;
+    }
+
+    form {
+        margin-top: 5rem;
+    }
+
+    #contacto {
+        display: flex;
     }
 }
